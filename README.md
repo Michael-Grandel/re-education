@@ -1,5 +1,5 @@
 # Re-Education
-A collection of notes, mathematical derivations, and re-learning of subjects studied during my undergrad at Columbia University. This also contains notes about research papers and up-to-date science.
+A collection of notes, mathematical derivations, and re-learning of subjects studied during my undergrad at Columbia University. This also contains notes about research papers and up-to-date science. At the center of it all, my notes are less structured and more focused on understanding the 'why' and how things work. For math, that often is a derivation.
 
 ## Motivation
 As a first-gen college student and American, I had to figure out what life looks like after high-school all on my own, without any legacy to guide me. A benefit of this is I get to explore and pursue my own interests without familial pressure to become anything but financially secure. While I found myself deeply passionate about math, I found there were too many of it's applications that interest me, and I struggle to hone-in on one. This led me to pursue my undegrad experience at Columbia Univeristy (SEAS) by completing a triple minor, as well as replacing all undergraduate coursework with advanced graduate versions when permitted. I studied:
