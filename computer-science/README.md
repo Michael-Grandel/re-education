@@ -1,0 +1,17 @@
+# Courses
+- COMS W3134: Data Structures
+- COMS W3157: Advanced Programming
+- COMS W3203: Discrete Math
+- COMS W4701: Artificial Intelligence
+- COMS W4771: Machine Learning
+- CSEE W3827: Fundementals of Computer Systems
+- COMS W3261: CS Theory
+- COMS W4111: Databases
+- COMS W4731: Computer Vision
+- COMS W4995: Deep Learning
+- COMS W4118: Operating Systems
+- COMS W4160: Computer Graphics
+- COMS W4172: 3D UI and Augmented Reality
+- COMS W4705: NLP
+- COMS W4181: Security I
+- COMS E6998: Security Robustness of ML Systems
