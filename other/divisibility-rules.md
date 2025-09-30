@@ -8,14 +8,15 @@ We already knew the answer, but then I extended it by asking, "Do you know why?"
 And so, the derivation begins.
 
 ## Writing a 3 digit number algebraically
-Lets start with a 3 digit number: 
+Lets start with a 3 digit number:
+
 $$ ABC $$
 
-If we use 745, in this case $ A = 7, B = 4, C = 5 $. Lets write this number algebraically.
+If we use 745, in this case $A = 7, B = 4, C = 5$. Lets write this number algebraically.
 
 $$ ABC = 100A + 10B + C $$
 
-So now, if we want to check if this number is divisible by 3, we can check if $ 100A + 10B + C $ is divisible by 3. <b> But what does it "really" mean, algebraically, if a number is divisible by 3? </b>
+So now, if we want to check if this number is divisible by 3, we can check if $100A + 10B + C$ is divisible by 3. <b> But what does it "really" mean, algebraically, if a number is divisible by 3? </b>
 
 ---
 Well, it means we can write a number, $N$, as a product of 3 and another integer number:
@@ -25,7 +26,7 @@ $$ N = 3n \mid n \in \mathbb{Z}$$
 For example, $6 = 3(2), 90 = 3(30)$, but $7 = 3(\frac{7}{3})$, hence 7 is not divisible by 3.
 
 ---
-Thus, if $ ABC $ were to be divisible by 3, then we can write:
+Thus, if $ABC$ were to be divisible by 3, then we can write:
 
 $$ ABC = 3n \mid n \in \mathbb{Z} $$
 $$ 
@@ -43,11 +44,11 @@ I don't care how many coins are in the group, just if there is any remaider.
 So in the lets look at 100A: if we just divide that by 3, the only remainder is A/3. 
 The same goes for 10B, the only remainder is B/3.
 
-If we want to look at this more algebraically, we know in step 3 that $33A + 3B$ is already an integer, because $\{33, A, 3, B \}$ are all integers, and the product/sum of integers is an integer.
+If we want to look at this more algebraically, we know in step 3 that $33A + 3B$ is already an integer, because $\lbrace 33, A, 3, B \rbrace$ are all integers, and the product/sum of integers is an integer.
 
 So the only part that determines if $n$ is an integer is the last part, $\frac{A + B + C}{3}$. 
 
-<b> Thus, if $A + B + C$ (the sum of the digits) is divisible by 3, then the whole number $ABC$ is divisible by 3. </b>
+** Thus, if $A + B + C$ (the sum of the digits) is divisible by 3, then the whole number $ABC$ is divisible by 3. **
 
 
 ## Full derivation: extending this to n-digit numbers
