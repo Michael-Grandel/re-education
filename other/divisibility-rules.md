@@ -87,9 +87,9 @@ Lets plug this back into our equation for k:
 $$
 \begin{align}
 k &= \sum_{i=0}^{n} \frac{10^i}{3} x_i \\
-k &= \sum_{i=0}^{n} \frac{\left ( 9 \sum_{j=0}^{i-1} 10^j \right ) + 1}{3} x_i \\
-k &= 3 \sum_{i=0}^{n}\sum_{j=0}^{i-1} 10^jx_i + \sum_{i=0}^{n} \frac{x_i}{3} \\
-k &= N +  \sum_{i=0}^{n} \frac{x_i}{3} \mid N \in \mathbb{Z} \\
+  &= \sum_{i=0}^{n} \frac{\left ( 9 \sum_{j=0}^{i-1} 10^j \right ) + 1}{3} x_i \\
+  &= 3 \sum_{i=0}^{n}\sum_{j=0}^{i-1} 10^jx_i + \sum_{i=0}^{n} \frac{x_i}{3} \\
+  &= N +  \sum_{i=0}^{n} \frac{x_i}{3} \mid N \in \mathbb{Z} \\
 \end{align}
 $$
 
