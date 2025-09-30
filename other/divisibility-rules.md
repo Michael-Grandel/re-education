@@ -1,5 +1,5 @@
 # Overview
-During a trip for a wedding in Honduras, myself and 2 friends were left at a cafe in the jungle why we waited for other friends to arrive. During this time, somehow the question came up:
+During a trip for a wedding in Honduras, myself and two friends were left at a cafe in the jungle why we waited for other friends to arrive. During this time, somehow the question came up:
 
 <b> "How can you tell a number is divisible by 3?" </b>
 
@@ -66,8 +66,8 @@ k &= \sum_{i=0}^{n} \frac{10^i}{3} x_i \\
 \end{align}$$
 
 ---
-$10^i$ is every power of 10, so $ \{1, 10, 100, 1000, ... \} $. We can re-write all of these as:
-$ \{1, 9 + 1, 99 + 1, 999 + 1, ... \} $. 
+$10^i$ is every power of 10, so $\{1, 10, 100, 1000, ... \}$. 
+We can re-write all of these as: $ \{1, 9 + 1, 99 + 1, 999 + 1, ... \} $. 
 
 Why am I writing it like this? Because when we divide by 3, every power of 10 is written as a number divisible by 3, plus 1. 
 
