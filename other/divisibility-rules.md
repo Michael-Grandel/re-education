@@ -60,23 +60,27 @@ $$ x = 10^nx_n + 10^{n-1}x_{n-1} + ... + 10^2x_2 + 10^1x_1 + 10^0x_0 $$
 $$ x = \sum_{i=0}^{n} 10^i x_i \mid x_i \in \mathbb{Z} $$
 
 Now, we want to check if $x$ is divisible by 3. So we can write:
+
 $$ 
 \begin{align}
 x &= 3k \mid k \in \mathbb{Z} \\
 k &= \sum_{i=0}^{n} \frac{10^i}{3} x_i \\
-\end{align}$$
+\end{align}
+$$
 
 ---
 $10^i$ is every power of 10, so $\lbrace 1, 10, 100, 1000, ... \rbrace$.
-We can re-write all of these as: $\{1, 9 + 1, 99 + 1, 999 + 1, ... \}$. 
+We can re-write all of these as: $\lbrace 1, 9 + 1, 99 + 1, 999 + 1, ... \rbrace$. 
 
 Why am I writing it like this? Because when we divide by 3, every power of 10 is written as a number divisible by 3, plus 1. 
 
 So we always go to some 99999 like number, which is divisble by 3, and our remainder is always 1. But, to be mathematically correct, we need to write this algebraically.
 
 More precisely, we can write:
+
 $$ 10^i = 9(10^{i-1}) + 9 (10^{i-2}) + ... + 9(10^0) + 1 $$
 $$ 10^i = \left ( 9 \sum_{j=0}^{i-1} 10^j \right ) + 1 $$
+
 ---
 Lets plug this back into our equation for k:
 
@@ -91,17 +95,17 @@ $$
 
 Now, we can see that $N$ is an integer, because it is a sum/product of integers. So the only part that determines if $k$ is an integer is the last part, $\sum_{i=0}^{n} \frac{x_i}{3}$. 
 
-<b> Thus, if $\sum_{i=0}^{n} x_i$ (the sum of the digits) is divisible by 3, then the whole number $x$ is divisible by 3.
-</b>
+**Thus, if $\sum_{i=0}^{n} x_i$ (the sum of the digits) is divisible by 3, then the whole number $x$ is divisible by 3.**
 
 ---
 ---
 ## Other divisibility rules
 Using the same logic, we can derive other divisibility rules. For example, an easy one is:
 
-<b> Why do we always look to see if last digit is even, to see if a number is divisible by 2? </b>
+**Why do we always look to see if last digit is even, to see if a number is divisible by 2?**
 
 Let's start with an n-digit number again:
+
 $$ x = \sum_{i=0}^{n} 10^i x_i \mid x_i \in \mathbb{Z} $$
 
 We want to check if $x$ is divisible by 2. So let's skip the mathematical formality and just divide by 2:
@@ -118,7 +122,7 @@ $$
 \end{align} 
 $$
 
-Hence, a number is divisble by 2 if the last digit, $x_0$, is divisble by 2 (even).
+**Hence, a number is divisble by 2 if the last digit, $x_0$, is divisble by 2 (even).**
 
 ---
 Using this, we can discover new divisibility rules for everything. The goal is to learn to process, and then it can be applied to any problem.
