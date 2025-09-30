@@ -48,7 +48,7 @@ If we want to look at this more algebraically, we know in step 3 that $33A + 3B$
 
 So the only part that determines if $n$ is an integer is the last part, $\frac{A + B + C}{3}$. 
 
-** Thus, if $A + B + C$ (the sum of the digits) is divisible by 3, then the whole number $ABC$ is divisible by 3. **
+**Thus, if $A + B + C$ (the sum of the digits) is divisible by 3, then the whole number $ABC$ is divisible by 3.**
 
 
 ## Full derivation: extending this to n-digit numbers
