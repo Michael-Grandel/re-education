@@ -56,6 +56,7 @@ $$
 Well I already see my mistake. I can't have a negative number for $B^2$. Of course, we know that $C>A$, so $C=(n+m), A=(n-m)$.
 
 So let's switch the two:
+
 $$
 \begin{align}
     A^2 + B^2 &= C^2 \\
@@ -90,6 +91,7 @@ $$ n = y^2 $$
 where we introduced two new variables $x, y$. But to keep it simple, we just rename them back to $n, m$.
 
 So, if we do this, we have:
+
 $$ B = 2\sqrt{(n^2)(m^2)} = 2nm $$
 $$ A = n^2 - m^2 $$
 $$ C = n^2 + m^2 $$
