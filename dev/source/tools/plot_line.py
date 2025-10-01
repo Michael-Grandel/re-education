@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-def plot_line(A:tuple, B:tuple, 
+def plot_line_2D(A:tuple, B:tuple, 
               point_label:tuple[str, str] = None, 
               line_label:str = None,
               a_alignment:tuple[str, str] = ('left', 'center'),
@@ -33,3 +33,25 @@ def plot_line(A:tuple, B:tuple,
         l_ha = l_alignment[0]
         l_va = l_alignment[1]
         plt.text((A[0] + B[0]) / 2, (A[1] + B[1]) / 2, line_label, fontsize=12, ha=l_ha, va=l_va)
+
+def plot_line_3D(A:tuple, B:tuple, ax:plt.Axes,
+                 point_label=None,
+                 style='k-'):
+    """
+    Plot a line segment between points A and B.
+        params:
+            A, B are points (x, y, z)
+            point_label is the text to label both points ("A", "B")
+            line_label is the text to label the line segment "d"
+            alignment values are matplotlib alignments
+    """
+    
+    x = [A[0], B[0]]
+    y = [A[1], B[1]]
+    z = [A[2], B[2]]
+
+    if point_label:
+        ax.text(A[0], A[1], A[2], point_label[0], fontsize=12)
+        ax.text(B[0], B[1], B[2], point_label[1], fontsize=12)
+
+    ax.plot(x, y, z, style)

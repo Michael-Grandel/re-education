@@ -1,5 +1,8 @@
+import sys
+sys.path.append('../../')
+
 import matplotlib.pyplot as plt
-from tools.plot_line import plot_line 
+from tools.plot_line import plot_line_2D
 from tools.AngleAnnotation import AngleAnnotation
 
 # Define points A and B (hypotenuse endpoints)
@@ -16,19 +19,19 @@ ba=('left', 'bottom')
 ca=('left', 'top')
 
 def plot_init_line():
-    plot_line(A, B, ("A","B"), a_alignment=aa, b_alignment=ba)
+    plot_line_2D(A, B, ("A","B"), a_alignment=aa, b_alignment=ba)
 
 def plot_right_triangle():
-    plot_line(A, C, line_label=r"$x$", a_alignment=aa, b_alignment=ca, l_alignment=('center','top'))
-    plot_line(B, C, line_label=r"$y$", a_alignment=ba, b_alignment=ca, l_alignment=('left','center'))
-    plot_line(A, B, line_label=r"$z$", a_alignment=aa, b_alignment=ba, l_alignment=('center','bottom'))
+    plot_line_2D(A, C, line_label=r"$x$", a_alignment=aa, b_alignment=ca, l_alignment=('center','top'))
+    plot_line_2D(B, C, line_label=r"$y$", a_alignment=ba, b_alignment=ca, l_alignment=('left','center'))
+    plot_line_2D(A, B, line_label=r"$z$", a_alignment=aa, b_alignment=ba, l_alignment=('center','bottom'))
 
 def plot_all_triangles():
     plot_right_triangle()
     x_extended = (B[1] - A[1])**2 / (B[0] - A[0])
     x_ext_point = (B[0] + x_extended, A[1])
-    plot_line(C, x_ext_point, line_label=r"$x_e$", l_alignment=('left','top'), style='k--')
-    plot_line(B, x_ext_point, style='k--')
+    plot_line_2D(C, x_ext_point, line_label=r"$x_e$", l_alignment=('left','top'), style='k--')
+    plot_line_2D(B, x_ext_point, style='k--')
     
     ax = plt.gca()
     AngleAnnotation(A, C, B, size=100, ax=ax, text=r"$\alpha$", textposition="inside")
@@ -40,7 +43,7 @@ def plot_all_triangles():
 
 # ========== UTILITY ============= #
 def plot_setup():
-    plt.figure(figsize=(4, 4))
+    fig, ax = plt.subplots(figsize=(4, 4))
     plt.axis('off')
 
 def plot_setup_all():
@@ -52,7 +55,8 @@ def plot(setup, plot_func):
     setup()
     plot_func()
     plt.show()
-# ================================ #
+
+# ============= MAIN ============= #
 plot(plot_setup, plot_init_line)
 plot(plot_setup, plot_right_triangle)
 plot(plot_setup_all, plot_all_triangles)
