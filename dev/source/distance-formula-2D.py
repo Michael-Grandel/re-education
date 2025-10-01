@@ -31,12 +31,12 @@ def plot_all_triangles():
     plot_line(B, x_ext_point, style='k--')
     
     ax = plt.gca()
-    AngleAnnotation(A, C, B, size=50, ax=ax, text=r"$\alpha$", textposition="inside")
-    AngleAnnotation(B, C, x_ext_point, size=50,ax=ax, text=r"$\alpha$", textposition="inside")
-    AngleAnnotation(B, A, C, size=50, ax=ax, text=r"$\beta$", textposition="inside")
-    AngleAnnotation(x_ext_point, B, C, size=50, ax=ax, text=r"$\beta$", textposition="inside")
-    AngleAnnotation(C, B, A, size=150, ax=ax, text=r"$\frac{\pi}{2}$", textposition="inside",  color="red", text_kw=dict(fontsize=12, color="red"))
-    AngleAnnotation(B, A, x_ext_point, size=150, ax=ax, text=r"$\frac{\pi}{2}$", textposition="inside", color="red", text_kw=dict(fontsize=12, color="red"))
+    AngleAnnotation(A, C, B, size=60, ax=ax, text=r"$\alpha$", textposition="inside")
+    AngleAnnotation(B, C, x_ext_point, size=60,ax=ax, text=r"$\alpha$", textposition="inside")
+    AngleAnnotation(B, A, C, size=60, ax=ax, text=r"$\beta$", textposition="inside")
+    AngleAnnotation(x_ext_point, B, C, size=60, ax=ax, text=r"$\beta$", textposition="inside")
+    AngleAnnotation(C, B, A, size=100, ax=ax, color="red")
+    AngleAnnotation(B, A, x_ext_point, size=100, ax=ax, color="red")
 
 # ========== UTILITY ============= #
 def plot_setup():
