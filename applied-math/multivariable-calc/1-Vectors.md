@@ -27,6 +27,6 @@ One can extend this to $n$ dimensions, by using induction. The distance of the n
 $$
 \begin{align}
 D_{\mathbb{R}^n} &= \text{Distance in } \mathbb{R}^n \\
-D_{\mathbb{R}^{n+1}}^2 &= \underbrace{D_{\mathbb{R}^n}^2}_{\text{projection}} + \underbrace{(A_{n+1}-B_{n+1})^2}_{\text{new vertical}}
+D_{\mathbb{R}^{n+1}}^2 &= \underbrace{D_{\mathbb{R}^n}^2}_{projection} + \underbrace{(A_{n+1}-B_{n+1})^2}_{new vertical}
 \end{align}
 $$
