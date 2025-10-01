@@ -8,7 +8,7 @@ This will also help me kick off the source code in the dev folder, which will be
 # Distance formula in 2D
 Let's start with two points in 2D space, and call them A (x1, y1) and B (x2, y2).
 
-![Image of a line](data/applied-math/other/Figure_1.png)
+![Image of a line](/data/applied-math/other/Figure_1.png)
 
 We can project these points down to the x and y axis, and draw a right triangle. The hypotenuse of this triangle is the distance between the two points, which we will call $z$.
 
