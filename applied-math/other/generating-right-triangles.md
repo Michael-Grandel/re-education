@@ -1,17 +1,18 @@
 # Overview
 During the summer after freshman year in high school, I went to some math program in NYU, which essentially was solving math-team-like questions. I thought I was good at math until I joined that program. One thing though always stuck with me, which was:
 
-**Using two integers n and m, we can generate any right triangles by the following ...**
+Using two integers n and m, we can generate any right triangles by the following ...
+---
 
 And that was all I remembered. I did not know how we got there, but I was fascinated by the concept. During my adult life, I remember it had maybe something to do with $n+m, n-m, 2m+1$ or some sort of combination. 
 
 After starting this repository, once this thought came again I decided it's time to figure it out. After a graduate math degree and work experience, surely now I can figure it out.
 
----
-*I will approach this derivation as my thinking process was on paper, so one can see the intuition behind all the moves*
----
 
-# $A^2 + B^2 = C^2$
+***I will approach this derivation as my thinking process was on paper, so one can see the intuition behind all the moves***
+
+
+# Right triangles: $A^2 + B^2 = C^2$
 
 $A, B, C$ are all integers. So, maybe we can break these down into some smaller integers, $n, m$. The beauty of this is we can set A and B to be whatever we want in terms of $n,m$ and then solve for C. 
 
