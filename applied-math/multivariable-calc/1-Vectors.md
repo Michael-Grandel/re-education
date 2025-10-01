@@ -1,5 +1,6 @@
 # Distance Formula
 ![Line in 3D](/data/applied-math/multivariable-calc/Figure_1.png)
+
 What is the distance between A and B? The image above shows projections of lines onto different planes, which allows us to use 2D distance formula to derive the 3D distance one.
 
 $$
@@ -25,6 +26,7 @@ One can extend this to $n$ dimensions, by using induction. The distance of the n
 
 $$
 D_{\mathbb{R}^n} = \text{Distance in } \mathbb{R}^n \\
+
 D_{\mathbb{R}^{n+1}}^2= \underbrace{D_{\mathbb{R}^n}^2}_{\text{projection}}+
                         \underbrace{(A_{n+1}-B_{n+1})^2}_{\text{new vertical}}
 $$
