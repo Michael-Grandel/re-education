@@ -1,7 +1,7 @@
 # Overview
 During a trip for a wedding in Honduras, myself and two friends were left at a cafe in the jungle why we waited for other friends to arrive. During this time, somehow the question came up:
 
-<b> "How can you tell a number is divisible by 3?" </b>
+**"How can you tell a number is divisible by 3?"**
 
 We already knew the answer, but then I extended it by asking, "Do you know why?" 
 
