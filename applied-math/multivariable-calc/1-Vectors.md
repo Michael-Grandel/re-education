@@ -13,10 +13,7 @@ $$
 So, its just the sum of squares of all the projections. In otherwords, if $d$ is the distance:
 
 $$
-\overline{AD}^2 = \Delta x^2, 
-\overline{CD}^2 = \Delta y^2, 
-\overline{BC}^2 = \Delta z^2 \\
-
+\overline{AD}^2 = \Delta x^2, \overline{CD}^2 = \Delta y^2, \overline{BC}^2 = \Delta z^2 \\
 \boxed{
     d^2 = \Delta x^2 + \Delta y^2 + \Delta z^2
 }
