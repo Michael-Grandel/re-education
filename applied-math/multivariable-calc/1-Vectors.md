@@ -25,8 +25,10 @@ $$
 One can extend this to $n$ dimensions, by using induction. The distance of the next (n+1) dimension just involves the distnace of projection in $n$ dimensions and the new vertical.
 
 $$
-D_{\mathbb{R}^n} = \text{Distance in } \mathbb{R}^n \\
+D_{\mathbb{R}^n} = \text{Distance in } \mathbb{R}^n
+$$
 
+$$
 D_{\mathbb{R}^{n+1}}^2= \underbrace{D_{\mathbb{R}^n}^2}_{\text{projection}}+
                         \underbrace{(A_{n+1}-B_{n+1})^2}_{\text{new vertical}}
 $$
