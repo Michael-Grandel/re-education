@@ -31,10 +31,10 @@ def plot_all_triangles():
     plot_line(B, x_ext_point, style='k--')
     
     ax = plt.gca()
-    AngleAnnotation(A, C, B, size=60, ax=ax, text=r"$\alpha$", textposition="inside")
-    AngleAnnotation(B, C, x_ext_point, size=60,ax=ax, text=r"$\alpha$", textposition="inside")
-    AngleAnnotation(B, A, C, size=60, ax=ax, text=r"$\beta$", textposition="inside")
-    AngleAnnotation(x_ext_point, B, C, size=60, ax=ax, text=r"$\beta$", textposition="inside")
+    AngleAnnotation(A, C, B, size=60, ax=ax, text=r"$\alpha$", textposition="outside")
+    AngleAnnotation(B, C, x_ext_point, size=60,ax=ax, text=r"$\alpha$", textposition="outside")
+    AngleAnnotation(B, A, C, size=60, ax=ax, text=r"$\beta$", textposition="outside")
+    AngleAnnotation(x_ext_point, B, C, size=60, ax=ax, text=r"$\beta$", textposition="outside")
     AngleAnnotation(C, B, A, size=100, ax=ax, color="red")
     AngleAnnotation(B, A, x_ext_point, size=100, ax=ax, color="red")
 
