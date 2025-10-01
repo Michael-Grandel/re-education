@@ -12,7 +12,7 @@ Let's start with two points in 2D space, and call them A (x1, y1) and B (x2, y2)
 
 We can project these points down to the x and y axis, and draw a right triangle. The hypotenuse of this triangle is the distance between the two points, which we will call $z$.
 
-[Image generated with code in dev/ folder]
+![Image of a right triangle](/data/applied-math/other/Figure_2.png)
 
 Now to find a relationship between x and y, to get z. In otherwords, we want to find $f$ such that:
 
@@ -22,7 +22,7 @@ To find such a relationship, we can extend the projected x-leg to form another r
 
 This means the triangles are dilations of each other and allow us to form equations. This can also be derived, but it is a fundemental concept in geometry that I will skip. (If you scale a triangle, the angles remain the same, and all the sides increase by the same scale).
 
-[Image generated with code in dev/ folder]
+![Image of multiple triangles from original right triangle](/data/applied-math/other/Figure_3.png)
 
 There are 3 triangles here, the big one, and the two smaller ones, all with the same 3 angles. So, the proportion of the sides across each of them are the same:
 

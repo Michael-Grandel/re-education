@@ -31,20 +31,20 @@ def plot_all_triangles():
     plot_line(B, x_ext_point, style='k--')
     
     ax = plt.gca()
-    AngleAnnotation(A, C, B, size=100, ax=ax, text=r"$\alpha$", textposition="inside")
-    AngleAnnotation(B, C, x_ext_point, size=100,ax=ax, text=r"$\alpha$", textposition="inside")
-    AngleAnnotation(B, A, C, size=100, ax=ax, text=r"$\beta$", textposition="inside")
-    AngleAnnotation(x_ext_point, B, C, size=100, ax=ax, text=r"$\beta$", textposition="inside")
-    AngleAnnotation(C, B, A, size=300, ax=ax, text=r"$\frac{\pi}{2}$", textposition="inside",  color="red", text_kw=dict(fontsize=20, color="red"))
-    AngleAnnotation(B, A, x_ext_point, size=300, ax=ax, text=r"$\frac{\pi}{2}$", textposition="inside", color="red", text_kw=dict(fontsize=20, color="red"))
+    AngleAnnotation(A, C, B, size=50, ax=ax, text=r"$\alpha$", textposition="inside")
+    AngleAnnotation(B, C, x_ext_point, size=50,ax=ax, text=r"$\alpha$", textposition="inside")
+    AngleAnnotation(B, A, C, size=50, ax=ax, text=r"$\beta$", textposition="inside")
+    AngleAnnotation(x_ext_point, B, C, size=50, ax=ax, text=r"$\beta$", textposition="inside")
+    AngleAnnotation(C, B, A, size=150, ax=ax, text=r"$\frac{\pi}{2}$", textposition="inside",  color="red", text_kw=dict(fontsize=12, color="red"))
+    AngleAnnotation(B, A, x_ext_point, size=150, ax=ax, text=r"$\frac{\pi}{2}$", textposition="inside", color="red", text_kw=dict(fontsize=12, color="red"))
 
 # ========== UTILITY ============= #
 def plot_setup():
-    plt.figure(figsize=(6, 6))
+    plt.figure(figsize=(2, 2))
     plt.axis('off')
 
 def plot_setup_all():
-    fig, ax = plt.subplots(figsize=(10, 6))
+    fig, ax = plt.subplots(figsize=(3.3, 2))
     fig.canvas.draw()  # Need to draw the figure to define renderer
     plt.axis('off')
 

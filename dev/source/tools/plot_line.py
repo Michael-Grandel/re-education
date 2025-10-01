@@ -26,10 +26,10 @@ def plot_line(A:tuple, B:tuple,
         b_ha = b_alignment[0]
         b_va = b_alignment[1]
 
-        plt.text(A[0], A[1], point_label[0], fontsize=20, ha=a_ha, va=a_va)
-        plt.text(B[0], B[1], point_label[1], fontsize=20, ha=b_ha, va=b_va)
+        plt.text(A[0], A[1], point_label[0], fontsize=12, ha=a_ha, va=a_va)
+        plt.text(B[0], B[1], point_label[1], fontsize=12, ha=b_ha, va=b_va)
     
     if line_label:
         l_ha = l_alignment[0]
         l_va = l_alignment[1]
-        plt.text((A[0] + B[0]) / 2, (A[1] + B[1]) / 2, line_label, fontsize=20, ha=l_ha, va=l_va)
+        plt.text((A[0] + B[0]) / 2, (A[1] + B[1]) / 2, line_label, fontsize=12, ha=l_ha, va=l_va)
