@@ -152,7 +152,7 @@ $$ \boxed{\cos \theta = \frac{\vec a \cdot \vec b}{ab}} $$
 ## Direction Vector (Unit Vector)
 We can use this now to discover a fast way to compute unit vectors, which we will see also is the direction.
 
-If we replace $\vec b$ with the axes (x-axis, y-axis, z-axis)$\rightarrow(\hat i, \hat j, \hat k)$, we will be measuring the cosine of the angle between vector a and the axis. In other words, this is the direction of $\vec a$.
+If we replace $\vec b$ with the axes (x-axis, y-axis, z-axis) $\rightarrow(\hat i, \hat j, \hat k)$, we will be measuring the cosine of the angle between vector a and the axis. In other words, this is the direction of $\vec a$.
 
 $$
 \cos \alpha =\frac{\vec a \cdot \hat i}{a|\hat i|} = \frac{\vec a \cdot \hat i}{a} = \vec u_a \cdot \hat i = u_a^i\hat i
