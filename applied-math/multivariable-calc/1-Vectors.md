@@ -200,4 +200,4 @@ $$
 
 And finlly the third thing: the dot product of vector a and vector b, is the projection of a times the scale of b. _In my 'boosting' concept, it is how much of a is boosting b, in the direction of b._
 
-$$ \boxed{\vec a \cdot \vec b = b(a\cos \theta) = b\text{ proj}_{b} \vec{a}} $$
+$$ \boxed{\vec a \cdot \vec b = b(a\cos \theta) = b|\text{ proj}_{b} \vec{a}|} $$
