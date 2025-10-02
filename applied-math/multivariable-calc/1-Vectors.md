@@ -64,7 +64,7 @@ This pattern was assigned the 'dot product', and through many common application
 * If two vectors are perpendicular, then there is no 'boost' in the other's direction, so their dot product is 0.
 
 $$ 
-\boxed{\vec a \cdot \vec b = \sum_ia_ib_i} \\
+\boxed{\vec a \cdot \vec b = \sum_ia_ib_i} \newline
 \rightarrow a_xb_x + a_yb_y + a_zb_z 
 $$
 
