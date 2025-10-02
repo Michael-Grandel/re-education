@@ -109,9 +109,11 @@ We can evaluate c in terms of a and b, since we know:
 $$ \vec c = \vec b - \vec a $$
 
 We can re-write (derived below): 
+
 $$ c^2 = (\vec b - \vec a) \cdot (\vec b - \vec a) $$
 
 ---
+
 $$
 \begin{align}
 \vec a \cdot \vec b &= \sum_ia_ib_i \\
@@ -134,6 +136,7 @@ $$
                                  &= \vec a \cdot \vec b \pm \vec a \cdot \vec c 
 \end{align}
 $$
+
 Thus, it distributes just like in scalar multiplication
 
 ---
