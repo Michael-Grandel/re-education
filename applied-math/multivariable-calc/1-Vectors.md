@@ -377,24 +377,28 @@ So let's summarize all our rules below:
 # Summary
 ### Basic rules:
 $$ 
-\begin{align*}
-\vec a \cdot \vec b &= \sum_ia_ib_i       &      \vec a \cdot \vec b &= ab \cos \theta     &  \vec a \cdot \vec a &= a^2\\
-\vec a \mathsf{x} \vec b &= \begin{bmatrix}
-                                b_jc_k - b_kc_j \\
-                                b_kc_i - b_ic_k  \\
-                                b_ic_j - b_jc_i
-                            \end{bmatrix} &     |\vec a \mathsf{x} \vec b| &= ab\sin \theta & \vec a \mathsf{x} \vec a &= 0 
-\end{align*}
+\boxed{
+    \begin{align*}
+    \vec a \cdot \vec b &= \sum_ia_ib_i       &      \vec a \cdot \vec b &= ab \cos \theta     &  \vec a \cdot \vec a &= a^2\\
+    \vec a \mathsf{x} \vec b &= \begin{bmatrix}
+                                    b_jc_k - b_kc_j \\
+                                    b_kc_i - b_ic_k  \\
+                                    b_ic_j - b_jc_i
+                                \end{bmatrix} &     |\vec a \mathsf{x} \vec b| &= ab\sin \theta & \vec a \mathsf{x} \vec a &= 0 
+    \end{align*}
+}
 $$
 
 ### Distributive rules:
 $$
+\boxed{
 \begin{align}
 \vec a \cdot (\vec b \pm \vec c) &= \vec a \cdot \vec b \pm \vec a \cdot \vec c \\
 \vec a \mathsf{x} (\vec b \pm \vec c) &=  \vec a \mathsf{x} \vec b \pm \vec a \mathsf{x} \vec c \\ 
 \vec a \cdot (\vec b \mathsf{x} \vec c) &= (\vec a \mathsf{x} \vec b) \cdot \vec c \\
 \vec a \mathsf{x} (\vec b \mathsf{x} \vec c) &= (\vec a \cdot \vec c) \vec b - (\vec a \cdot \vec b) \vec c
 \end{align}
+}
 $$
 
 ** Order matters for cross product
@@ -417,10 +421,15 @@ $$
 
 ### Distance Formula (between a, b)
 
-$$ d^2_n = \sum_i^n(a_i-b_i)^2 $$
+$$ \boxed{ d^2_n = \sum_i^n(a_i-b_i)^2 } $$
 
 ### Hyper sphere
 
-Hollow: $r^2 = \sum_i^n(x_i-x^0_i)^2$
-
-Solid: $r^2 \geq \sum_i^n(x_i-x^0_i)^2$
+$$
+\boxed{
+\begin{align}
+    \text{Hollow: } r^2 &= \sum_i^n(x_i-x^0_i)^2 \\
+    \text{Solid: } r^2 &\geq \sum_i^n(x_i-x^0_i)^2
+\end{align}
+}
+$$
