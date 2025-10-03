@@ -251,7 +251,7 @@ $$ z_j = x_ky_i - x_iy_k $$
 
 $$ z_i = x_jy_k - x_ky_j $$
 
-3. The last one is $z_k$, so we will go from $ i \rightarrow j$:
+3. The last one is $z_k$, so we will go from $i \rightarrow j$:
 
 $$ z_k = x_iy_j - x_jy_i $$
 
@@ -388,7 +388,6 @@ $$
 $$
 
 ### Distributive rules:
-
 $$
 \begin{align}
 \vec a \cdot (\vec b \pm \vec c) &= \vec a \cdot \vec b \pm \vec a \cdot \vec c \\
@@ -397,10 +396,12 @@ $$
 \vec a \mathsf{x} (\vec b \mathsf{x} \vec c) &= (\vec a \cdot \vec c) \vec b - (\vec a \cdot \vec b) \vec c
 \end{align}
 $$
+
 ** Order matters for cross product
 
 ### Other
 1. If you don't have the angle between vectors, you can also find the length of the cross product as: 
+
 $$ |\vec a \mathsf{x} \vec b| =\sqrt{a^2b^2-(\vec a \cdot \vec b )^2} $$
 
 
