@@ -317,7 +317,109 @@ $$ \vec a \mathsf{x} (\vec b + \vec c) = ? $$
 
 Let's just look at one component and see what happens:
 
-``` math 
-a_i = a_j(b_k+c_k) - a_k(b_j + c_j) \\
-test
-```
+$$
+?_i = a_j(b_k+c_k) - a_k(b_j + c_j) = (a_jb_k - a_kb_j) + (a_jc_k - a_kc_j) 
+$$
+
+So we can see this same pattern for the other terms, leading to:
+
+$$\vec a \mathsf{x} (\vec b + \vec c) =  \vec a \mathsf{x} \vec b + \vec a \mathsf{x} \vec c$$
+
+Next, in doing something similar, we can see the order of the cross product **matters**:
+
+$$ (\vec b + \vec c) \mathsf{x} \vec a =  \vec b \mathsf{x} \vec a + \vec c \mathsf{x} \vec a \neq \vec a \mathsf{x} (\vec b + \vec c)$$
+
+Next:
+
+$$\vec a \cdot (\vec b \mathsf{x} \vec c) = ? $$
+
+$$ = a_ib_jc_k-a_ib_kc_j + a_jb_kc_i - a_jb_ic_k +a_kb_ic_j - a_kb_jc_i $$
+
+$$ = c_i(a_jb_k-a_kb_j) + c_j(a_kb_i-a_ib_k) + c_k(a_ib_j-a_jb_i) $$
+
+$$ = (\vec a \mathsf{x} \vec b) \cdot \vec c $$
+
+Finally... this is a long one:
+
+$$ \vec a \mathsf{x} (\vec b \mathsf{x} \vec c) = ? $$
+
+$$ 
+\begin{align}
+&= \vec a \mathsf{x} 
+        \begin{bmatrix}
+            b_jc_k - b_kc_j \\
+            b_kc_i - b_ic_k  \\
+            b_ic_j - b_jc_i
+        \end{bmatrix} \\
+&=      \begin{bmatrix}
+            a_j(b_ic_j - b_jc_i) - a_k(b_kc_i - b_ic_k) \\
+            a_k(b_jc_k - b_kc_j) - a_i(b_ic_j - b_jc_i) \\
+            a_i(b_kc_i - b_ic_k) - a_j(b_jc_k - b_kc_j)
+        \end{bmatrix} \\
+&=      \begin{bmatrix}
+            (a_jc_j+a_kc_k)b_i - (a_jb_j + a_kb_k)c_i \\
+            (a_ic_i+a_kc_k)b_j - (a_ib_i + a_kb_k)c_j \\
+            (a_ic_i+a_jc_j)b_k - (a_ib_i + a_jb_j)c_k 
+        \end{bmatrix} \\
+&=      \begin{bmatrix}
+            (a_ic_i + a_jc_j+a_kc_k)b_i - (a_ib_i + a_jb_j + a_kb_k)c_i \\
+            (a_ic_i+ a_jc_j + a_kc_k)b_j - (a_ib_i + a_jb_j + a_kb_k)c_j \\
+            (a_ic_i+a_jc_j + a_kc_k)b_k - (a_ib_i + a_jb_j + a_kb_k)c_k 
+        \end{bmatrix} \\
+&= (\vec a \cdot \vec c) \vec b - (\vec a \cdot \vec b) \vec c
+\end {align} 
+$$
+
+In that last step, notice how we can always add 0. So, for example, in the first component I added $a_ib_ic_i - a_ib_ic_i = 0$, and this nicely distributed into both parentheses. I did that because I wanted to try making the first term look like a dot product, which luckily made the second term also one. That's not luck, it's the beauty of math!
+
+So let's summarize all our rules below:
+
+# Summary
+### Basic rules:
+$$ 
+\begin{align*}
+\vec a \cdot \vec b &= \sum_ia_ib_i       &      \vec a \cdot \vec b &= ab \cos \theta     &  \vec a \cdot \vec a &= a^2\\
+\vec a \mathsf{x} \vec b &= \begin{bmatrix}
+                                b_jc_k - b_kc_j \\
+                                b_kc_i - b_ic_k  \\
+                                b_ic_j - b_jc_i
+                            \end{bmatrix} &     |\vec a \mathsf{x} \vec b| &= ab\sin \theta & \vec a \mathsf{x} \vec a &= 0 
+\end{align*}
+$$
+
+### Distributive rules:
+
+$$
+\begin{align}
+\vec a \cdot (\vec b \pm \vec c) &= \vec a \cdot \vec b \pm \vec a \cdot \vec c \\
+\vec a \mathsf{x} (\vec b \pm \vec c) &=  \vec a \mathsf{x} \vec b \pm \vec a \mathsf{x} \vec c \\ 
+\vec a \cdot (\vec b \mathsf{x} \vec c) &= (\vec a \mathsf{x} \vec b) \cdot \vec c \\
+\vec a \mathsf{x} (\vec b \mathsf{x} \vec c) &= (\vec a \cdot \vec c) \vec b - (\vec a \cdot \vec b) \vec c
+\end{align}
+$$
+** Order matters for cross product
+
+### Other
+1. If you don't have the angle between vectors, you can also find the length of the cross product as: 
+$$ |\vec a \mathsf{x} \vec b| =\sqrt{a^2b^2-(\vec a \cdot \vec b )^2} $$
+
+
+2. The dot product between $a$ and $b$ can also be viewed as the projection of $a$ along $b$
+
+$$ 
+\overrightarrow{\text{proj}_{b}a} = \frac{\vec a \cdot \vec b}{b} \vec u_b = \left ( \frac{\vec a \cdot \vec b}{b^2} \right ) \vec b
+$$
+
+$$
+ |\overrightarrow{\text{proj}_{b}a}| = \vec a \cdot \vec u_b
+$$
+
+### Distance Formula (between a, b)
+
+$$ d^2_n = \sum_i^n(a_i-b_i)^2 $$
+
+### Hyper sphere
+
+Hollow: $r^2 = \sum_i^n(x_i-x^0_i)^2$
+
+Solid: $r^2 \geq \sum_i^n(x_i-x^0_i)^2$
