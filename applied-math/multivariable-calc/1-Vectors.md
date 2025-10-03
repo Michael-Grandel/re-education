@@ -317,6 +317,6 @@ $$ \vec a \mathsf{x} (\vec b + \vec c) = ? $$
 
 Let's just look at one component and see what happens:
 
-$$ a_i = a_j(b_k+c_k) - a_k(b_j + c_j)  \\\
+$$ a_i = a_j(b_k+c_k) - a_k(b_j + c_j)  \\\\
 test
 $$
