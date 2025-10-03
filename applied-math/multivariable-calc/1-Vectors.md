@@ -381,9 +381,9 @@ $$
     \begin{align*}
     \vec a \cdot \vec b &= \sum_ia_ib_i       &      \vec a \cdot \vec b &= ab \cos \theta     &  \vec a \cdot \vec a &= a^2\\
     \vec a \mathsf{x} \vec b &= \begin{bmatrix}
-                                    b_jc_k - b_kc_j \\
-                                    b_kc_i - b_ic_k  \\
-                                    b_ic_j - b_jc_i
+                                    a_jb_k - a_kb_j \\
+                                    a_kb_i - a_ib_k  \\
+                                    a_ib_j - a_jb_i
                                 \end{bmatrix} &     |\vec a \mathsf{x} \vec b| &= ab\sin \theta & \vec a \mathsf{x} \vec a &= 0 
     \end{align*}
 }
