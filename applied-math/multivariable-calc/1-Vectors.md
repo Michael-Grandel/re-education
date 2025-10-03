@@ -58,7 +58,7 @@ Fundemental knowledge that I won't go over:
 This value has less of a derivation and more of an explanation. This is because there is a pattern in math that comes up alot when working with 2+ vectors and running computations.
 This pattern was assigned the 'dot product', and through many common applications there are different interpretations. My intepretation of it is:
 
-> The dot product of two vectors $\vec a$ and $\vec b$ is a measure of the total "boosting" between $\vec a$ and $\vec b$; 
+### The dot product of two vectors $\vec a$ and $\vec b$ is a measure of the total "boosting" between $\vec a$ and $\vec b$ 
 
 * If two vectors are in the same direction, their dot product would be the product of their length _(magnitude/length/boost)_
 * If two vectors are perpendicular, then there is no 'boost' in the other's direction, so their dot product is 0.
@@ -201,3 +201,122 @@ $$
 And finlly the third thing: the dot product of vector a and vector b, is the projection of a times the scale of b. _In my 'boosting' concept, it is how much of a is boosting b, in the direction of b._
 
 $$ \boxed{\vec a \cdot \vec b = b(a\cos \theta) = b|\text{ proj}_{b} \vec{a}|} $$
+
+# Cross Product: Find the perpendicular vector
+Another quantity that commonly arrises is defined as the cross product. I believe the intuition of creating this came from the following question:
+
+### Given two vectors, $\vec a, \vec b$ what is the perpendicular vector to them?
+
+Using all our equations for the dot product, we can quickly derive that perpendicular vectors has a dot product of 0. Let's say our perpendicular vector is $\vec n$, then:
+
+$$ \vec a \cdot \vec n = \vec b \cdot \vec n = 0 $$
+
+$$ 
+\begin{align}
+    a_in_i + a_jn_j + a_kn_k &= 0 \\
+    b_in_i + b_jn_j + b_kn_k &= 0 \\
+   \rightarrow b_k(a_in_i + a_jn_j) - a_k(b_in_i + b_jn_j) &= 0 \\
+   \underbrace{(a_i b_k - a_k b_i)}_p n_i + \underbrace{(a_j b_k - a_k b_j)}_q n_j &= 0 \\
+   pn_i + qn_j &= 0
+\end{align}
+$$
+
+One solution is: $n_i = q, n_j = -p$. Which we can then plug in and solve for $n_k$.
+
+
+$$ 
+\begin{align}
+n_i &= a_jb_k - a_kb_j \\
+n_j &= a_kb_i - a_ib_k  \\
+n_k &= a_ib_j - a_jb_i
+\end{align}
+$$
+
+### This is the cross product: $\vec n = \vec a \mathsf{x} \vec b$
+There are several ways to remember this. My prefered way is:
+
+1. If we want $n_i$, that means we have a combo of $j, k$ for $\vec a$ and $\vec b$.
+2. It's always a difference between 2 terms
+3. The terms go in the order of $i \rightarrow j \rightarrow k \rightarrow i \rightarrow ... $
+
+
+Example: cross product: $ \vec z = \vec x \mathsf{x} \vec y $ 
+(I will start with the 2nd element)
+
+1. Let's start with $z_j$, so that means we will have two terms subtracted, starting with $x_k$ and then $x_i$. The y-terms will be the component that x is **not**.
+
+$$ z_j = x_ky_i - x_iy_k $$
+
+2. Then let's go to $z_i$, so that means we will have $x_j$ and then $x_k$:
+
+$$ z_i = x_jy_k - x_ky_j $$
+
+3. The last one is $z_k$, so we will go from $ i \rightarrow j$:
+
+$$ z_k = x_iy_j - x_jy_i $$
+
+---
+
+This is simple for 3 terms, but there is a way to also do it for n-dimensions. We won't do it here, but the approach is the same:
+
+1. We will have n-1 dot products all equal to 0
+2. We will have n-1 factors next to each $n_i$ term
+3. We will be able to set each factor to $p_i$
+4. Then we can come up with values for each $n_i$ as a product of all the _**other**_ $p_i$ terms and some extra numerical factor. 
+
+For example, in the case of 4 dimensions we will have:
+
+$$ p n_i + q n_j + zn_k = 0 $$
+
+One solution is: $n_i = qz, n_j = pz, n_k = -2pq$, and then we can solve for $n_l$, the 4th term.
+
+---
+
+So now, let's be curious. We explored what $ \vec a \cdot \vec a$ is, but now what is:
+
+$$\vec a \mathsf{x}  \vec a = ? $$
+
+Well logically, we there are infinite vectors that are perpendicular to a singular vector... so the answer is either 0 or infinity I'd suppose. 
+
+If we plug into the equations we just derived, all the two terms being subtracted are equal, so they cancel.
+
+$$ \boxed {\vec a \mathsf{x}  \vec a = 0} $$
+
+Next, what is the length of the perpendicular vector?
+
+$$ | \vec a \mathsf{x} \vec b | = ? $$
+
+Let's plug it all in:
+
+$$ 
+\begin {align}
+| \vec a \mathsf{x} \vec b | ^ 2 &= (\vec a \mathsf{X} \vec b) \cdot (\vec a \mathsf{X} \vec b ) \\
+&=  (a_jb_k - a_kb_j)^2 + (a_kb_i - a_ib_k)^2 + (a_ib_j - a_jb_i)^2 \\
+&= a_j^2b_k^2 + a_k^2b_j^2 +a_k^2b_i^2 + a_i^2b_k^2 + a_i^2b_j^2 + a_j^2b_i^2 - 2(a_ja_kb_kb_j + a_ka_ib_ib_k + a_ia_jb_jb_i) \\
+&= a_i^2(b_j^2 + b_k^2) + a_j^2(b_i^2 + b_k^2) + a_k^2(b_i^2 + b_j^2) - 2(a_ja_kb_kb_j + a_ka_ib_ib_k + a_ia_jb_jb_i) \\
+&+ a_i^2b_i^2 - a_i^2b_i^2 + a_j^2b_j^2 - a_j^2b_j^2 + a_k^2b_k^2 - a_k^2b_k^2 \\
+&= (a_i^2 + a_j^2 + a_k^2)(b_i^2 + b_j^2 + b_k^2) - (a_i^2b_i^2 + a_j^2b_j^2 + a_k^2b_k^2 + 2(a_ja_kb_kb_j + a_ka_ib_ib_k + a_ia_jb_jb_i)) \\
+&= |\vec a|^2|\vec b|^2 - ((a_ib_i + a_jb_j)^2 + a_k^2b_k^2 + 2(a_ja_kb_kb_j + a_ka_ib_ib_k)) \\
+&= |\vec a|^2|\vec b|^2 - (a_ib_i + a_jb_j + a_kb_k)^2 \\
+&= |\vec a|^2|\vec b|^2 - (\vec a \cdot \vec b)^2 \\
+&= a^2b^2 - a^2b^2 \cos^2 \theta \leftarrow \text{(remember notation)} \\
+&= a^2b^2(1-\cos^2 \theta) \\
+&= a^2b^2\sin^2\theta \\
+\therefore |\vec a \mathsf{x} \vec b| &= ab\sin \theta
+\end {align}
+$$
+
+So, if we have the angle then we can use the final result. Otherwise, we can use the dot product from the result 4-times previous.
+
+$$ \boxed{|\vec a \mathsf{x} \vec b| = ab\sin \theta = \sqrt{a^2b^2-(\vec a \cdot \vec b )^2}} $$
+
+---
+Let's derive the distributive properties, and then have one big summary of everything we learned about vectors.
+
+$$ \vec a \mathsf{x} (\vec b + \vec c) = ? $$
+
+Let's just look at one component and see what happens:
+
+$$ a_i = a_j(b_k+c_k) - a_k(b_j + c_j) 
+\\\
+$$
