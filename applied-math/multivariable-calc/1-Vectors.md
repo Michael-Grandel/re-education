@@ -372,7 +372,89 @@ $$
 
 In that last step, notice how we can always add 0. So, for example, in the first component I added $a_ib_ic_i - a_ib_ic_i = 0$, and this nicely distributed into both parentheses. I did that because I wanted to try making the first term look like a dot product, which luckily made the second term also one. That's not luck, it's the beauty of math!
 
-So let's summarize all our rules below:
+# Planes
+We can now use what we know to define the equation of a plane. There are two things we are looking for:
+
+1. Given an equation, how can we tell if it is a plane?
+2. Given some initial values, can we determine the equation of the plane that fits these values?
+
+Let's think about what we need. If we just have 2 points on a 3D space, then we can connect them with a line, but make infinite planes. If we add a 3rd point however, then we define the plane. So, if we have 3 points (P0, P1, P2), we can define a plane. Now we just need some equations to answer these two questions.
+
+1. P0 to P1 defines 1st vector
+2. P0 to P2 defines 2nd vector
+3. The normal is perpendicular to **any** vector along the plane (dot product = 0) 
+4. We derived the normal is the cross-product 
+
+![Plane Derivation ](/data/applied-math/multivariable-calc/Figure_4.png)
+
+We can use the first three points to define an equation of a plane, which then helps us answer the first question.
+
+$$ 
+\begin{aligned}
+\hat n \cdot (\vec r - \vec r_0) &= 0 \\
+n_x (x - x_0) + n_y(y-y_0) + n_z(z-z_0) &= 0 \\
+n_xx + n_yy + n_zz + (-n_xx_0 - n_yy_0 - n_zz_0) &=0  
+\end{aligned}
+$$
+
+That is actually the equation of the plane. If we see an equation in the format as above, that means it's a plane. Looks like a lot though, doesn't it? Well, we can clean it up by saying $\hat n=(n_x,n_y,n_z) \rightarrow (a, b ,c)$ and noticing the last term is just a constant.
+
+We end up with two option. Meaning, if we have an equation of the form below, then it's a plane. AND we can quickly pick out what the normal vector of that plane is, which is $\hat n = (a,b,c)$:
+
+$$ \boxed{
+    \begin{aligned}
+        ax + by + c + d &= 0 \\
+        a(x-x_0) + b(y-y_0) + c (z-z_0) &= 0
+    \end{aligned}
+}
+$$
+
+Notice how the constant is defined by the initial point and the normal vector:
+
+$$ d = - ( ax_0 + by_0 + cz_0 ) $$
+
+Now to answer the second question: If we have 3 points, what is the equation of the plane? 
+
+Well using the form above, one point is $(x_0, y_0, z_0)$, the second point is $(x,y,z)$, and all we need is to compute the normal to plug into $(a, b, c)$.
+
+$$
+\begin{aligned}
+\hat n &= (\vec r_1 - \vec r_0)  \mathsf{x} (\vec r - \vec r_0) \\ 
+&=\vec r_1 \mathsf{x} \vec r - \vec r_1 \mathsf{x} \vec r_0 - \vec r_0 \mathsf{x} \vec r + \underbrace{\vec r_0 \mathsf{x} \vec r_0}_0 \\
+&= \vec r_1 \mathsf{x} \vec r - \vec r_1 \mathsf{x} \vec r_0 - \vec r_0 \mathsf{x} \vec r 
+\end{aligned}
+$$
+
+$$ \boxed{
+    \hat n = (\vec r_1 - \vec r_0)\mathsf{x} \vec r - \vec r_1 \mathsf{x} \vec r_0
+ } 
+$$
+
+# Shortest distance from a point to a plane
+One application of above is finding the shortest distance from a point to a plane:
+
+![Shortest distance ](/data/applied-math/multivariable-calc/Figure_5.png)
+
+So, we are given the equation of the plane as:
+
+$$ ax + by + cz + d = 0$$
+
+So, we quickly know the normal is $\hat n = (a, b, c)$ and we have any point, $(x_0,y_0,z_0)$ by using the equation. The shortest distance of a point above a plane defines a projection, and thus a right triangle for us to work with.
+
+Let's say $\vec x$ points to the point in question and $\vec x_0$ points to a point on the plane. We thus have:
+
+$$ 
+\begin{align}
+    \lambda &= |\overrightarrow{\text{proj}_{\hat n}(\vec x - \vec x_0)}| \\
+    &= (\vec x - \vec x_0) \cdot \frac{\hat n} {|{ \hat n}|} \\ 
+    &= \frac{a(x-x_0) + b(y-y_0) + c(z-z_0)}{\sqrt{a^2 + b^2 + c^2}} \\
+    &= \frac{ax + by + cz + d}{\sqrt{a^2 + b^2 + c^2}}
+\end{align}
+$$
+
+NOTE: You may quickly think isn't $d=0$, because we said: $ax + by + cz + d = 0$, but that is incorrect because we defined $(x,y,z)$ to be **the point NOT on the plane.**
+
+So let's summarize what we found below:
 
 # Summary
 ### Basic rules:
@@ -423,13 +505,34 @@ $$
 
 $$ \boxed{ d^2_n = \sum_i^n(a_i-b_i)^2 } $$
 
-### Hyper sphere
 
+### Spheres
 $$
 \boxed{
 \begin{align}
-    \text{Hollow: } r^2 &= \sum_i^n(x_i-x^0_i)^2 \\
-    \text{Solid: } r^2 &\geq \sum_i^n(x_i-x^0_i)^2
+    \text{Hollow: } r^2 &= (x-x_0)^2 + (y-y_0)^2 + (z-z_0)^2 \\
+    \text{Solid: } r^2 &\geq (x-x_0)^2 + (y-y_0)^2 + (z-z_0)^2 \\
+    \text{Hyper: } r^2 &= \sum_i^n(x_i-x^0_i)^2 \\
 \end{align}
 }
 $$
+
+### Planes
+
+$$ \boxed{
+    \begin{aligned}
+        ax + by + c + d &= 0  & \hat n &= (a, b, c)\\
+        a(x-x_0) + b(y-y_0) + c (z-z_0) &= 0 & \hat n &= (\vec r_1 - \vec r_0)  \mathsf{x} (\vec r - \vec r_0) \\
+    \end{aligned}
+}
+$$
+
+#### Shortest distance from a point $(x,y,z)$ to a plane:
+
+$$
+\boxed{
+    \lambda = |\overrightarrow{\text{proj}_{\hat n}(\vec x - \vec x_0)}| = \frac{ax + by + cz + d}{\sqrt{a^2 + b^2 + c^2}} 
+}
+$$
+
+

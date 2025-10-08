@@ -2,6 +2,7 @@ import sys
 sys.path.append('../../')
 
 import matplotlib.pyplot as plt
+import numpy as np
 import math
 from tools.plot_line import plot_line_2D, plot_line_3D
 from tools.AngleAnnotation import AngleAnnotation
@@ -89,6 +90,92 @@ def figure_3():
     plt.axis('off')
     plt.show()
 
+def figure_4():
+    
+    ax = plt.figure().add_subplot(projection='3d')
+    ax.set_xlim([-4, 4])
+    ax.set_ylim([-4, 4])
+    ax.set_zlim([0, 7])
+    ax.set_xlabel('X-axis')
+    ax.set_ylabel('Y-axis')
+    ax.set_zlabel('Z-axis')
+    ax.view_init(elev=20, azim=-115, roll=20)
+
+    # plane
+    x = np.linspace(-5, 5, 100)
+    y = np.linspace(-5, 5, 100)
+    xx, yy = np.meshgrid(x, y)
+    z = 0.2* xx + 0.2* yy + 4
+
+    p0  = (0, 0 , 4)
+    p1 = (3, -3, 4)
+    p2 = (1, 1, 4.4)
+
+    vec_p0p1 = np.array(p1) - np.array(p0)
+    vec_p0p2 = np.array(p2) - np.array(p0)
+
+    ax.plot_surface(xx, yy, z, alpha = 0.25)
+    ax.scatter(xs=[p0[0],p1[0], p2[0]], ys = [p0[1], p1[1], p2[1]], zs = [p0[2], p1[2], p2[2]], s = 20, color = 'black')
+    
+    ax.quiver(0,0,0, p0[0],p0[1],p0[2], color='black', arrow_length_ratio=0.2)
+    ax.text(0,0, p0[2]/2, r'$\vec r_0$', fontsize=15)
+
+    ax.quiver(p0[0], p0[1], p0[2], vec_p0p1[0], vec_p0p1[1], vec_p0p1[2], color='black', arrow_length_ratio=0.2)
+    ax.text(p1[0], p1[1], p1[2], r'P1', fontsize=15)
+
+    ax.quiver(p0[0], p0[1], p0[2], vec_p0p2[0], vec_p0p2[1], vec_p0p2[2], color='black', arrow_length_ratio=0.2)
+    ax.text(p2[0], p2[1], p2[2], r'P2', fontsize=15)
+
+    ax.quiver(p0[0], p0[1], p0[2], -0.2, -0.2, 1, length=2, color='black', arrow_length_ratio=0.2)
+    ax.text(p0[0]-1, p0[1]+0.5, p0[2]+1, r'$\hat n$', fontsize=15)
+
+    plt.axis('off')
+    plt.show()
+
+def figure_5():
+    
+    ax = plt.figure().add_subplot(projection='3d')
+    ax.set_xlim([-4, 4])
+    ax.set_ylim([-4, 4])
+    ax.set_zlim([0, 7])
+    ax.set_xlabel('X-axis')
+    ax.set_ylabel('Y-axis')
+    ax.set_zlabel('Z-axis')
+    ax.view_init(elev=20, azim=-115, roll=20)
+
+    # plane
+    x = np.linspace(-5, 5, 100)
+    y = np.linspace(-5, 5, 100)
+    xx, yy = np.meshgrid(x, y)
+    z = 0.2* xx + 0.2* yy + 4
+
+    p0  = (0, 0 , 4)
+    p1 = (3, -3, 4)
+    p2 = (1, 1, 4.4)
+
+    vec_p0p1 = np.array(p1) - np.array(p0)
+    vec_p0p2 = np.array(p2) - np.array(p0)
+
+    ax.plot_surface(xx, yy, z, alpha = 0.25)
+    ax.scatter(xs=[p0[0],p1[0], p2[0]], ys = [p0[1], p1[1], p2[1]], zs = [p0[2], p1[2], p2[2]], s = 20, color = 'black')
+    
+    ax.quiver(0,0,0, p0[0],p0[1],p0[2], color='black', arrow_length_ratio=0.2)
+    ax.text(0,0, p0[2]/2, r'$\vec r_0$', fontsize=15)
+
+    ax.quiver(p0[0], p0[1], p0[2], vec_p0p1[0], vec_p0p1[1], vec_p0p1[2], color='black', arrow_length_ratio=0.2)
+    ax.text(p1[0], p1[1], p1[2], r'P1', fontsize=15)
+
+    ax.quiver(p0[0], p0[1], p0[2], vec_p0p2[0], vec_p0p2[1], vec_p0p2[2], color='black', arrow_length_ratio=0.2)
+    ax.text(p2[0], p2[1], p2[2], r'P2', fontsize=15)
+
+    ax.quiver(p0[0], p0[1], p0[2], -0.2, -0.2, 1, length=2, color='black', arrow_length_ratio=0.2)
+    ax.text(p0[0]-1, p0[1]+0.5, p0[2]+1, r'$\hat n$', fontsize=15)
+
+    plt.axis('off')
+    plt.show()
+
+
 #figure_1()
 #figure_2()
-figure_3()
+#figure_3()
+figure_4()
