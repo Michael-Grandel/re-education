@@ -240,7 +240,7 @@ There are several ways to remember this. My prefered way is:
 3. The terms go in the order of $i \rightarrow j \rightarrow k \rightarrow i \rightarrow ... $
 
 
-Example: cross product: $ \vec z = \vec x \mathsf{x} \vec y $ 
+Example: cross product: $\vec z = \vec x \mathsf{x} \vec y$ 
 (I will start with the 2nd element)
 
 1. Let's start with $z_j$, so that means we will have two terms subtracted, starting with $x_k$ and then $x_i$. The y-terms will be the component that x is **not**.
@@ -272,7 +272,7 @@ One solution is: $n_i = qz, n_j = pz, n_k = -2pq$, and then we can solve for $n_
 
 ---
 
-So now, let's be curious. We explored what $ \vec a \cdot \vec a$ is, but now what is:
+So now, let's be curious. We explored what $\vec a \cdot \vec a$ is, but now what is:
 
 $$\vec a \mathsf{x}  \vec a = ? $$
 
