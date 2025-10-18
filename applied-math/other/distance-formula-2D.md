@@ -30,10 +30,8 @@ $$
 \frac{\text{side across } \alpha_{\bigtriangleup1}}{\text{side across }\alpha_{\bigtriangleup2}} = \frac{\text{side across } \beta_{\bigtriangleup1}}{\text{side across } \beta_{\bigtriangleup2}}
 $$
 
-$$
-\frac{x}{y} = \frac{y}{x_e} \\
-\frac{z}{x} = \frac{x+x_e}{z}
-$$
+$$ \frac{x}{y} = \frac{y}{x_e} $$
+$$ \frac{z}{x} = \frac{x+x_e}{z} $$
 
 So now we can solve for $z$ in terms of $x$ and $y$:
 
