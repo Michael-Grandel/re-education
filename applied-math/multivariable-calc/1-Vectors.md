@@ -464,7 +464,7 @@ $$
 \end{align}
 $$
 
-NOTE: You may quickly think isn't $d=0$, because we said: $ax + by + cz + d = 0$, but that is incorrect because we defined $(x,y,z)$ to be **the point NOT on the plane.**
+NOTE: You may quickly think isn't $\lambda=0$, because we said: $ax + by + cz + d = 0$, but that is incorrect because we defined $(x,y,z)$ to be **the point NOT on the plane.**
 
 So let's summarize what we found below:
 

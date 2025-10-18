@@ -105,7 +105,7 @@ def figure_4():
     x = np.linspace(-5, 5, 100)
     y = np.linspace(-5, 5, 100)
     xx, yy = np.meshgrid(x, y)
-    z = 0.2* xx + 0.2* yy + 4
+    zz = 0.2* xx + 0.2* yy + 4
 
     p0  = (0, 0 , 4)
     p1 = (3, -3, 4)
@@ -114,7 +114,7 @@ def figure_4():
     vec_p0p1 = np.array(p1) - np.array(p0)
     vec_p0p2 = np.array(p2) - np.array(p0)
 
-    ax.plot_surface(xx, yy, z, alpha = 0.25)
+    ax.plot_surface(xx, yy, zz, alpha = 0.25)
     ax.scatter(xs=[p0[0],p1[0], p2[0]], ys = [p0[1], p1[1], p2[1]], zs = [p0[2], p1[2], p2[2]], s = 20, color = 'black')
     
     ax.quiver(0,0,0, p0[0],p0[1],p0[2], color='black', arrow_length_ratio=0.2)
@@ -147,29 +147,25 @@ def figure_5():
     x = np.linspace(-5, 5, 100)
     y = np.linspace(-5, 5, 100)
     xx, yy = np.meshgrid(x, y)
-    z = 0.2* xx + 0.2* yy + 4
+    zz = 0.2* xx + 0.2* yy + 4
 
     p0  = (0, 0 , 4)
-    p1 = (3, -3, 4)
-    p2 = (1, 1, 4.4)
+    px  = (2, 2, 8)
 
-    vec_p0p1 = np.array(p1) - np.array(p0)
-    vec_p0p2 = np.array(p2) - np.array(p0)
+    vec_p0px = np.array(px) - np.array(p0)
 
-    ax.plot_surface(xx, yy, z, alpha = 0.25)
-    ax.scatter(xs=[p0[0],p1[0], p2[0]], ys = [p0[1], p1[1], p2[1]], zs = [p0[2], p1[2], p2[2]], s = 20, color = 'black')
+    ax.plot_surface(xx, yy, zz, alpha = 0.25)
+    ax.scatter(xs=[p0[0],px[0]], ys=[p0[1],px[1]], zs=[p0[2],px[2]], s = 20, color = 'black')
     
-    ax.quiver(0,0,0, p0[0],p0[1],p0[2], color='black', arrow_length_ratio=0.2)
-    ax.text(0,0, p0[2]/2, r'$\vec r_0$', fontsize=15)
+    ax.quiver(0,0,0, p0[0],p0[1],p0[2], color='black', arrow_length_ratio=0.2)  
+    ax.text(0,0, p0[2]/2, r'$\vec x_0$', fontsize=15)
 
-    ax.quiver(p0[0], p0[1], p0[2], vec_p0p1[0], vec_p0p1[1], vec_p0p1[2], color='black', arrow_length_ratio=0.2)
-    ax.text(p1[0], p1[1], p1[2], r'P1', fontsize=15)
+    ax.quiver(p0[0], p0[1], p0[2], vec_p0px[0], vec_p0px[1], vec_p0px[2], color='black', arrow_length_ratio=0.2)
+    ax.text(px[0], px[1], px[2], r'x', fontsize=15)
 
-    ax.quiver(p0[0], p0[1], p0[2], vec_p0p2[0], vec_p0p2[1], vec_p0p2[2], color='black', arrow_length_ratio=0.2)
-    ax.text(p2[0], p2[1], p2[2], r'P2', fontsize=15)
-
-    ax.quiver(p0[0], p0[1], p0[2], -0.2, -0.2, 1, length=2, color='black', arrow_length_ratio=0.2)
-    ax.text(p0[0]-1, p0[1]+0.5, p0[2]+1, r'$\hat n$', fontsize=15)
+    # Length
+    l = (0.2*px[0] + 0.2 *px[1] - px[2] + 4)/math.sqrt(0.2**2 + 0.2**2 + 1**2)
+    ax.quiver(px[0], px[1], px[2], U = -0.2, V = -0.2, W = 1, color='red', linestyle='dashed', arrow_length_ratio=0.0, length=l)
 
     plt.axis('off')
     plt.show()
@@ -178,4 +174,5 @@ def figure_5():
 #figure_1()
 #figure_2()
 #figure_3()
-figure_4()
+#figure_4()
+figure_5()
