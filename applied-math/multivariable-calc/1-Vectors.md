@@ -534,13 +534,12 @@ $$
 
 ### Planes
 
-$$ \boxed{
+\boxed{
     \begin{aligned}
         ax + by + c + d &= 0  & \hat n &= (a, b, c)\\
         a(x-x_0) + b(y-y_0) + c (z-z_0) &= 0 & \hat n &= (\vec r_1 - \vec r_0)  \mathsf{x} (\vec r - \vec r_0) \\
     \end{aligned}
 }
-$$
 
 #### Shortest distance from a point $(x,y,z)$ to a plane
 

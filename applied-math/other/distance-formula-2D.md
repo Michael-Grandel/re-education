@@ -26,7 +26,7 @@ This means the triangles are dilations of each other and allow us to form equati
 
 There are 3 triangles here, the big one, and the two smaller ones, all with the same 3 angles. So, the proportion of the sides across each of them are the same:
 
-$$ 
+$$
 \frac{\text{side across } \alpha_{\bigtriangleup1}}{\text{side across }\alpha_{\bigtriangleup2}} = \frac{\text{side across } \beta_{\bigtriangleup1}}{\text{side across } \beta_{\bigtriangleup2}}
 $$
 
