@@ -35,8 +35,10 @@ $$
 \frac{z}{x} = \frac{x+x_e}{z}
 $$
 
-So now we can solve for $z$ in terms of $x$ and $y$: 
+So now we can solve for $z$ in terms of $x$ and $y$:
 
-$$ xx_e = y^2 \\
-z^2 = x^2 + xx_e$$
+$$ xx_e = y^2 $$
+
+$$ z^2 = x^2 + xx_e$$
+
 $$ \boxed{z^2 = x^2 + y^2} $$
