@@ -1,4 +1,7 @@
-# Distance Formula
+# Vector Fundementals
+
+## Distance Formula
+
 ![Line in 3D](/data/applied-math/multivariable-calc/Figure_1.png)
 
 What is the distance between A and B? The image above shows projections of lines onto different planes, which allows us to use 2D distance formula to derive the 3D distance one.
@@ -31,7 +34,8 @@ D_{\mathbb{R}^{n+1}}^2 &= \underbrace{D_{\mathbb{R}^n}^2}_{\text{projection}}+ \
 \end{align}
 ```
 
-# Sphere
+## Sphere
+
 So, just like in 2D, a sphere is the set of points that are equidistant from a point; all points a radius $r$ away from the center.
 
 The equation of a **hollow** sphere is, centered at $(x_0, y_0, z_0)$ is the distance formula:
@@ -46,7 +50,8 @@ A **solid** sphere would be all points that are within the radius; an inequality
 
 $$ c \geq (x-x_0)^2 + (y-y_0)^2 + (z-z_0)^2 $$
 
-# Vectors
+## Vectors
+
 Fundemental knowledge that I won't go over:
 
 1. What a vector is
@@ -55,27 +60,29 @@ Fundemental knowledge that I won't go over:
 4. Length and unit Vectors
 
 ## Dot product
+
 This value has less of a derivation and more of an explanation. This is because there is a pattern in math that comes up alot when working with 2+ vectors and running computations.
 This pattern was assigned the 'dot product', and through many common applications there are different interpretations. My intepretation of it is:
 
-### The dot product of two vectors $\vec a$ and $\vec b$ is a measure of the total "boosting" between $\vec a$ and $\vec b$ 
+### The dot product of two vectors $\vec a$ and $\vec b$ is a measure of the total "boosting" between $\vec a$ and $\vec b$
 
 * If two vectors are in the same direction, their dot product would be the product of their length _(magnitude/length/boost)_
 * If two vectors are perpendicular, then there is no 'boost' in the other's direction, so their dot product is 0.
 
-$$ 
-\boxed{\vec a \cdot \vec b = \sum_ia_ib_i} \rightarrow a_xb_x + a_yb_y + a_zb_z 
+$$
+\boxed{\vec a \cdot \vec b = \sum_ia_ib_i} \rightarrow a_xb_x + a_yb_y + a_zb_z
 $$
 
 ## Cosine application
+
 Let's use vectors and attempt a simple problem from trig. In doing this, we will see the dot product appear, and some neat relationship with the angle between two vectors.
 
 ![Cosine rule for finding triangle leg length](/data/applied-math/multivariable-calc/Figure_2.png)
 
 Using trigonometry (we can also derive this in the 'other' section), know this relationship between the length of the triangle's legs:
 
-$$ 
-|\vec c|^2 = |\vec a|^2 + |\vec b|^2 - 2|\vec a| |\vec b|\cos\theta 
+$$
+|\vec c|^2 = |\vec a|^2 + |\vec b|^2 - 2|\vec a| |\vec b|\cos\theta
 $$
 
 ----
@@ -96,7 +103,7 @@ $$
 ----
 So we have:
 
-$$ 
+$$
 c^2 = a^2 + b^2 - 2ab\cos\theta
 $$
 
@@ -108,11 +115,11 @@ We can evaluate c in terms of a and b, since we know:
 
 $$ \vec c = \vec b - \vec a $$
 
-We can re-write (derived below): 
+We can re-write (derived below):
 
 $$ c^2 = (\vec b - \vec a) \cdot (\vec b - \vec a) $$
 
----
+----
 
 $$
 \begin{align}
@@ -125,7 +132,8 @@ $$
 
 Meaning, the dot product between a vector and itself is the sum of it's components, squared. Which is the same thing as the length of the vector, squared.
 
----
+----
+
 One more thing to derive is what (if any) is the distributive property of vectors
 
 $$
@@ -133,13 +141,13 @@ $$
 \vec a \cdot (\vec b \pm \vec c) &= \sum_i a_i(b_i\pm c_i) \\
                                  &= \sum_i a_i b_i \pm a_i c_i \\
                                  &= \sum_i a_i b_i \pm \sum_i a_i c_i \\
-                                 &= \vec a \cdot \vec b \pm \vec a \cdot \vec c 
+                                 &= \vec a \cdot \vec b \pm \vec a \cdot \vec c
 \end{align}
 $$
 
 Thus, it distributes just like in scalar multiplication
 
----
+----
 
 Putting these together, we can now express:
 
@@ -150,6 +158,7 @@ $$ \therefore \cos \theta = \frac{-2\vec a \cdot \vec b}{-2ab}$$
 $$ \boxed{\cos \theta = \frac{\vec a \cdot \vec b}{ab}} $$
 
 ## Direction Vector (Unit Vector)
+
 We can use this now to discover a fast way to compute unit vectors, which we will see also is the direction.
 
 If we replace $\vec b$ with the axes (x-axis, y-axis, z-axis) $\rightarrow(\hat i, \hat j, \hat k)$, we will be measuring the cosine of the angle between vector a and the axis. In other words, this is the direction of $\vec a$.
@@ -173,6 +182,7 @@ $$
 So, the unit vector of a vector is simply the cosine of all the angles between the respective axes.
 
 ## Projection Application
+
 We can now derive another common interpretation of what a dot product is. If we take what we just derived for cosine, we write the dot product as:
 
 $$ \vec a \cdot \vec b = ab \cos \theta $$
@@ -194,7 +204,7 @@ That's the first thing: the magnitude projection of vector a onto vector b, is t
 
 This leads to the second thing, the actual projection vector is thus:
 
-$$ 
+$$
 \boxed{\overrightarrow{\text{proj}_{b}a} = \frac{\vec a \cdot \vec b}{b} \vec u_b = \left ( \frac{\vec a \cdot \vec b}{b^2} \right ) \vec b}
 $$
 
@@ -202,16 +212,17 @@ And finlly the third thing: the dot product of vector a and vector b, is the pro
 
 $$ \boxed{\vec a \cdot \vec b = b(a\cos \theta) = b|\text{ proj}_{b} \vec{a}|} $$
 
-# Cross Product: Find the perpendicular vector
+## Cross Product: Find the perpendicular vector
+
 Another quantity that commonly arrises is defined as the cross product. I believe the intuition of creating this came from the following question:
 
-### Given two vectors, $\vec a, \vec b$ what is the perpendicular vector to them?
+## Given two vectors, $\vec a, \vec b$ what is the perpendicular vector to them?
 
 Using all our equations for the dot product, we can quickly derive that perpendicular vectors has a dot product of 0. Let's say our perpendicular vector is $\vec n$, then:
 
 $$ \vec a \cdot \vec n = \vec b \cdot \vec n = 0 $$
 
-$$ 
+$$
 \begin{align}
     a_in_i + a_jn_j + a_kn_k &= 0 \\
     b_in_i + b_jn_j + b_kn_k &= 0 \\
@@ -223,8 +234,7 @@ $$
 
 One solution is: $n_i = q, n_j = -p$. Which we can then plug in and solve for $n_k$.
 
-
-$$ 
+$$
 \begin{align}
 n_i &= a_jb_k - a_kb_j \\
 n_j &= a_kb_i - a_ib_k  \\
@@ -233,14 +243,14 @@ n_k &= a_ib_j - a_jb_i
 $$
 
 ### This is the cross product: $\vec n = \vec a \mathsf{x} \vec b$
+
 There are several ways to remember this. My prefered way is:
 
 1. If we want $n_i$, that means we have a combo of $j, k$ for $\vec a$ and $\vec b$.
 2. It's always a difference between 2 terms
 3. The terms go in the order of $i \rightarrow j \rightarrow k \rightarrow i \rightarrow ... $
 
-
-Example: cross product: $\vec z = \vec x \mathsf{x} \vec y$ 
+Example: cross product: $\vec z = \vec x \mathsf{x} \vec y$
 (I will start with the 2nd element)
 
 1. Let's start with $z_j$, so that means we will have two terms subtracted, starting with $x_k$ and then $x_i$. The y-terms will be the component that x is **not**.
@@ -255,14 +265,14 @@ $$ z_i = x_jy_k - x_ky_j $$
 
 $$ z_k = x_iy_j - x_jy_i $$
 
----
+----
 
 This is simple for 3 terms, but there is a way to also do it for n-dimensions. We won't do it here, but the approach is the same:
 
 1. We will have n-1 dot products all equal to 0
 2. We will have n-1 factors next to each $n_i$ term
 3. We will be able to set each factor to $p_i$
-4. Then we can come up with values for each $n_i$ as a product of all the _**other**_ $p_i$ terms and some extra numerical factor. 
+4. Then we can come up with values for each $n_i$ as a product of all the _**other**_ $p_i$ terms and some extra numerical factor.
 
 For example, in the case of 4 dimensions we will have:
 
@@ -270,13 +280,13 @@ $$ p n_i + q n_j + zn_k = 0 $$
 
 One solution is: $n_i = qz, n_j = pz, n_k = -2pq$, and then we can solve for $n_l$, the 4th term.
 
----
+----
 
 So now, let's be curious. We explored what $\vec a \cdot \vec a$ is, but now what is:
 
 $$\vec a \mathsf{x}  \vec a = ? $$
 
-Well logically, we there are infinite vectors that are perpendicular to a singular vector... so the answer is either 0 or infinity I'd suppose. 
+Well logically, we there are infinite vectors that are perpendicular to a singular vector... so the answer is either 0 or infinity I'd suppose.
 
 If we plug into the equations we just derived, all the two terms being subtracted are equal, so they cancel.
 
@@ -288,7 +298,7 @@ $$ | \vec a \mathsf{x} \vec b | = ? $$
 
 Let's plug it all in:
 
-$$ 
+$$
 \begin {align}
 | \vec a \mathsf{x} \vec b | ^ 2 &= (\vec a \mathsf{X} \vec b) \cdot (\vec a \mathsf{X} \vec b ) \\
 &=  (a_jb_k - a_kb_j)^2 + (a_kb_i - a_ib_k)^2 + (a_ib_j - a_jb_i)^2 \\
@@ -310,7 +320,7 @@ So, if we have the angle then we can use the final result. Otherwise, we can use
 
 $$ \boxed{|\vec a \mathsf{x} \vec b| = ab\sin \theta = \sqrt{a^2b^2-(\vec a \cdot \vec b )^2}} $$
 
----
+----
 Let's derive the distributive properties, and then have one big summary of everything we learned about vectors.
 
 $$ \vec a \mathsf{x} (\vec b + \vec c) = ? $$
@@ -318,7 +328,7 @@ $$ \vec a \mathsf{x} (\vec b + \vec c) = ? $$
 Let's just look at one component and see what happens:
 
 $$
-?_i = a_j(b_k+c_k) - a_k(b_j + c_j) = (a_jb_k - a_kb_j) + (a_jc_k - a_kc_j) 
+?_i = a_j(b_k+c_k) - a_k(b_j + c_j) = (a_jb_k - a_kb_j) + (a_jc_k - a_kc_j)
 $$
 
 So we can see this same pattern for the other terms, leading to:
@@ -343,9 +353,9 @@ Finally... this is a long one:
 
 $$ \vec a \mathsf{x} (\vec b \mathsf{x} \vec c) = ? $$
 
-$$ 
+$$
 \begin{align}
-&= \vec a \mathsf{x} 
+&= \vec a \mathsf{x}
         \begin{bmatrix}
             b_jc_k - b_kc_j \\
             b_kc_i - b_ic_k  \\
@@ -359,20 +369,21 @@ $$
 &=      \begin{bmatrix}
             (a_jc_j+a_kc_k)b_i - (a_jb_j + a_kb_k)c_i \\
             (a_ic_i+a_kc_k)b_j - (a_ib_i + a_kb_k)c_j \\
-            (a_ic_i+a_jc_j)b_k - (a_ib_i + a_jb_j)c_k 
+            (a_ic_i+a_jc_j)b_k - (a_ib_i + a_jb_j)c_k
         \end{bmatrix} \\
 &=      \begin{bmatrix}
             (a_ic_i + a_jc_j+a_kc_k)b_i - (a_ib_i + a_jb_j + a_kb_k)c_i \\
             (a_ic_i+ a_jc_j + a_kc_k)b_j - (a_ib_i + a_jb_j + a_kb_k)c_j \\
-            (a_ic_i+a_jc_j + a_kc_k)b_k - (a_ib_i + a_jb_j + a_kb_k)c_k 
+            (a_ic_i+a_jc_j + a_kc_k)b_k - (a_ib_i + a_jb_j + a_kb_k)c_k
         \end{bmatrix} \\
 &= (\vec a \cdot \vec c) \vec b - (\vec a \cdot \vec b) \vec c
-\end {align} 
+\end {align}
 $$
 
 In that last step, notice how we can always add 0. So, for example, in the first component I added $a_ib_ic_i - a_ib_ic_i = 0$, and this nicely distributed into both parentheses. I did that because I wanted to try making the first term look like a dot product, which luckily made the second term also one. That's not luck, it's the beauty of math!
 
-# Planes
+## Planes fundementals
+
 We can now use what we know to define the equation of a plane. There are two things we are looking for:
 
 1. Given an equation, how can we tell if it is a plane?
@@ -382,14 +393,14 @@ Let's think about what we need. If we just have 2 points on a 3D space, then we 
 
 1. P0 to P1 defines 1st vector
 2. P0 to P2 defines 2nd vector
-3. The normal is perpendicular to **any** vector along the plane (dot product = 0) 
-4. We derived the normal is the cross-product 
+3. The normal is perpendicular to **any** vector along the plane (dot product = 0)
+4. We derived the normal is the cross-product
 
 ![Plane Derivation ](/data/applied-math/multivariable-calc/Figure_4.png)
 
 We can use the first three points to define an equation of a plane, which then helps us answer the first question.
 
-$$ 
+$$
 \begin{aligned}
 \hat n \cdot (\vec r - \vec r_0) &= 0 \\
 n_x (x - x_0) + n_y(y-y_0) + n_z(z-z_0) &= 0 \\
@@ -413,24 +424,25 @@ Notice how the constant is defined by the initial point and the normal vector:
 
 $$ d = - ( ax_0 + by_0 + cz_0 ) $$
 
-Now to answer the second question: If we have 3 points, what is the equation of the plane? 
+Now to answer the second question: If we have 3 points, what is the equation of the plane?
 
 Well using the form above, one point is $(x_0, y_0, z_0)$, the second point is $(x,y,z)$, and all we need is to compute the normal to plug into $(a, b, c)$.
 
 $$
 \begin{aligned}
-\hat n &= (\vec r_1 - \vec r_0)  \mathsf{x} (\vec r - \vec r_0) \\ 
+\hat n &= (\vec r_1 - \vec r_0)  \mathsf{x} (\vec r - \vec r_0) \\
 &=\vec r_1 \mathsf{x} \vec r - \vec r_1 \mathsf{x} \vec r_0 - \vec r_0 \mathsf{x} \vec r + \underbrace{\vec r_0 \mathsf{x} \vec r_0}_0 \\
-&= \vec r_1 \mathsf{x} \vec r - \vec r_1 \mathsf{x} \vec r_0 - \vec r_0 \mathsf{x} \vec r 
+&= \vec r_1 \mathsf{x} \vec r - \vec r_1 \mathsf{x} \vec r_0 - \vec r_0 \mathsf{x} \vec r
 \end{aligned}
 $$
 
 $$ \boxed{
     \hat n = (\vec r_1 - \vec r_0)\mathsf{x} \vec r - \vec r_1 \mathsf{x} \vec r_0
- } 
+ }
 $$
 
-# Shortest distance from a point to a plane
+## Shortest distance from a point to a plane
+
 One application of above is finding the shortest distance from a point to a plane:
 
 ![Shortest distance ](/data/applied-math/multivariable-calc/Figure_5.png)
@@ -443,10 +455,10 @@ So, we quickly know the normal is $\hat n = (a, b, c)$ and we have any point, $(
 
 Let's say $\vec x$ points to the point in question and $\vec x_0$ points to a point on the plane. We thus have:
 
-$$ 
+$$
 \begin{align}
     \lambda &= |\overrightarrow{\text{proj}_{\hat n}(\vec x - \vec x_0)}| \\
-    &= (\vec x - \vec x_0) \cdot \frac{\hat n} {|{ \hat n}|} \\ 
+    &= (\vec x - \vec x_0) \cdot \frac{\hat n} {|{ \hat n}|} \\
     &= \frac{a(x-x_0) + b(y-y_0) + c(z-z_0)}{\sqrt{a^2 + b^2 + c^2}} \\
     &= \frac{ax + by + cz + d}{\sqrt{a^2 + b^2 + c^2}}
 \end{align}
@@ -456,9 +468,11 @@ NOTE: You may quickly think isn't $d=0$, because we said: $ax + by + cz + d = 0$
 
 So let's summarize what we found below:
 
-# Summary
-### Basic rules:
-$$ 
+## Summary
+
+### Basic rules
+
+$$
 \boxed{
     \begin{align*}
     \vec a \cdot \vec b &= \sum_ia_ib_i       &      \vec a \cdot \vec b &= ab \cos \theta     &  \vec a \cdot \vec a &= a^2\\
@@ -466,17 +480,18 @@ $$
                                     a_jb_k - a_kb_j \\
                                     a_kb_i - a_ib_k  \\
                                     a_ib_j - a_jb_i
-                                \end{bmatrix} &     |\vec a \mathsf{x} \vec b| &= ab\sin \theta & \vec a \mathsf{x} \vec a &= 0 
+                                \end{bmatrix} &     |\vec a \mathsf{x} \vec b| &= ab\sin \theta & \vec a \mathsf{x} \vec a &= 0
     \end{align*}
 }
 $$
 
-### Distributive rules:
+### Distributive rules
+
 $$
 \boxed{
 \begin{align}
 \vec a \cdot (\vec b \pm \vec c) &= \vec a \cdot \vec b \pm \vec a \cdot \vec c \\
-\vec a \mathsf{x} (\vec b \pm \vec c) &=  \vec a \mathsf{x} \vec b \pm \vec a \mathsf{x} \vec c \\ 
+\vec a \mathsf{x} (\vec b \pm \vec c) &=  \vec a \mathsf{x} \vec b \pm \vec a \mathsf{x} \vec c \\
 \vec a \cdot (\vec b \mathsf{x} \vec c) &= (\vec a \mathsf{x} \vec b) \cdot \vec c \\
 \vec a \mathsf{x} (\vec b \mathsf{x} \vec c) &= (\vec a \cdot \vec c) \vec b - (\vec a \cdot \vec b) \vec c
 \end{align}
@@ -486,14 +501,14 @@ $$
 ** Order matters for cross product
 
 ### Other
-1. If you don't have the angle between vectors, you can also find the length of the cross product as: 
+
+1. If you don't have the angle between vectors, you can also find the length of the cross product as:
 
 $$ |\vec a \mathsf{x} \vec b| =\sqrt{a^2b^2-(\vec a \cdot \vec b )^2} $$
 
-
 2. The dot product between $a$ and $b$ can also be viewed as the projection of $a$ along $b$
 
-$$ 
+$$
 \overrightarrow{\text{proj}_{b}a} = \frac{\vec a \cdot \vec b}{b} \vec u_b = \left ( \frac{\vec a \cdot \vec b}{b^2} \right ) \vec b
 $$
 
@@ -505,8 +520,8 @@ $$
 
 $$ \boxed{ d^2_n = \sum_i^n(a_i-b_i)^2 } $$
 
-
 ### Spheres
+
 $$
 \boxed{
 \begin{align}
@@ -527,12 +542,10 @@ $$ \boxed{
 }
 $$
 
-#### Shortest distance from a point $(x,y,z)$ to a plane:
+#### Shortest distance from a point $(x,y,z)$ to a plane
 
 $$
 \boxed{
-    \lambda = |\overrightarrow{\text{proj}_{\hat n}(\vec x - \vec x_0)}| = \frac{ax + by + cz + d}{\sqrt{a^2 + b^2 + c^2}} 
+    \lambda = |\overrightarrow{\text{proj}_{\hat n}(\vec x - \vec x_0)}| = \frac{ax + by + cz + d}{\sqrt{a^2 + b^2 + c^2}}
 }
 $$
-
-
