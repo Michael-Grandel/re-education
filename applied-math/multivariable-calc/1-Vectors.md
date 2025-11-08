@@ -205,7 +205,7 @@ That's the first thing: the magnitude projection of vector a onto vector b, is t
 This leads to the second thing, the actual projection vector is thus:
 
 $$
-\boxed{\overrightarrow{\text{proj}_{b}a} = \frac{\vec a \cdot \vec b}{b} \vec u_b = \left ( \frac{\vec a \cdot \vec b}{b^2} \right ) \vec b}
+\boxed{\overrightarrow{\text{proj}_{b}a} = \vec a \cdot \vec u_b \left ( \frac{\vec b}{b} \right ) = \left ( \frac{\vec a \cdot \vec b}{b^2} \right ) \vec b}
 $$
 
 And finlly the third thing: the dot product of vector a and vector b, is the projection of a times the scale of b. _In my 'boosting' concept, it is how much of a is boosting b, in the direction of b._
@@ -286,7 +286,7 @@ So now, let's be curious. We explored what $\vec a \cdot \vec a$ is, but now wha
 
 $$\vec a \mathsf{x}  \vec a = ? $$
 
-Well logically, we there are infinite vectors that are perpendicular to a singular vector... so the answer is either 0 or infinity I'd suppose.
+Well logically, there are infinite vectors that are perpendicular to a singular vector... so the answer is either 0 or infinity I'd suppose.
 
 If we plug into the equations we just derived, all the two terms being subtracted are equal, so they cancel.
 
@@ -516,6 +516,11 @@ $$
  |\overrightarrow{\text{proj}_{b}a}| = \vec a \cdot \vec u_b
 $$
 
+3. We can find the direction / unit vector of a vector $\vec a$ quickly if we know the angles with the axes:
+
+$$
+\vec u_a = <\cos(\alpha), \cos(\beta), \cos(\gamma)>
+$$
 ### Distance Formula (between a, b)
 
 $$ \boxed{ d^2_n = \sum_i^n(a_i-b_i)^2 } $$
