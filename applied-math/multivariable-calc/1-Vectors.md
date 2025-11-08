@@ -120,13 +120,13 @@ We can re-write (derived below):
 $$ c^2 = (\vec b - \vec a) \cdot (\vec b - \vec a) $$
 
 ----
+So to bring the intuition of a dot-product, we want $c^2$ which is the length of the vector squared. How do we measure the length of a line? Well, if we project the line's x and y dimensions to form a right triangle, we know: $c^2 = c_x^2 + c_y^2 = c_x \cdot c_x + c_y \cdot c_y$.
 
 $$
 \begin{align}
-\vec a \cdot \vec b &= \sum_ia_ib_i \\
+ |a|^2  &= \sum_ia_i^2  \\
 \vec a \cdot \vec a &= \sum_ia_ia_i \\
-                    &= \sum_ia_i^2  \\
-                    &= |a|^2
+\vec a \cdot \vec b  &= \sum_ia_ib_i  \\
 \end{align}
 $$
 
